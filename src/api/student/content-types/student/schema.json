@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "students",
+  "info": {
+    "singularName": "student",
+    "pluralName": "students",
+    "displayName": "Student",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "student_title": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female",
+        "Other"
+      ]
+    },
+    "student_registration_id": {
+      "type": "uid",
+      "targetField": "student_id"
+    },
+    "student_name": {
+      "type": "string"
+    },
+    "student_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "student_image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "student_image_url": {
+      "type": "text"
+    }
+  }
+}
